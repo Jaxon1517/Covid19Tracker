@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Covid19Tracker</string>
+    <string name="info">Search the name of a country, and it will automatically give the number of
+        confirmed cases. Or, track a country, saving it to your tracked country list.</string>
 </resources>

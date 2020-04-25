@@ -3,30 +3,103 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:layout_gravity="center_horizontal"
+    android:background="#0F1B33">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="#00140A0A"
+        android:gravity="center|center_vertical"
         android:orientation="vertical"
         tools:context=".MainActivity">
 
-        <EditText
-            android:id="@+id/search_bar"
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="61dp"
+            android:layout_gravity="center_vertical"
+            android:background="@color/Yellow"
+            android:gravity="center"
+            android:paddingTop="10dp"
+            android:text="Corona Tracker"
+            android:textColor="@color/mainBlue"
+            android:textSize="40sp"
+            app:fontFamily="@font/medievalsharp" />
 
-        <Button
-            android:id="@+id/search_button"
-            android:text="Search"
-            android:layout_width="wrap_content"
+        <TextView
+            android:id="@+id/Info"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="fetchData"/>
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="@string/info"
+            android:textColor="@android:color/background_light"
+            android:textSize="20sp"
+            app:fontFamily="@font/medievalsharp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/search_bar"
+                android:layout_width="218dp"
+                android:layout_height="wrap_content"
+                android:textColor="#95D3B754"
+                tools:text="Search Here..." />
+
+            <Button
+                android:id="@+id/search_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#FFCB05"
+                android:onClick="fetchData"
+                android:text="Search" />
+
+            <Button
+                android:id="@+id/track_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/mainBlue"
+                android:onClick="addTrack"
+                android:text="Track"
+                android:textColor="#FFFFFF" />
+        </LinearLayout>
 
         <TextView
             android:id="@+id/confirmed_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:textColor="#3A7EC5"
+            android:textSize="46sp"
+            app:fontFamily="@font/medievalsharp" />
+
+        <TextView
+            android:id="@+id/extra"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="#3A7EC5"
+            android:textSize="40sp"
+            app:fontFamily="@font/medievalsharp" />
+
+        <Button
+            android:id="@+id/view_tracked_button"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:background="@color/mainBlue"
+            android:onClick="viewTracker"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:text="View Tracked Countries"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp" />
 
     </LinearLayout>
 </ScrollView>
